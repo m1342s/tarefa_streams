@@ -10,20 +10,12 @@ public class ClassificaPessoas {
 
 	public static void main(String[] args) {
 		String[] listaHomemMulher={"Maria-M","Joao-H","Bruna-M","Pedro-H","Daniela-M"};
-		List<String> separacao=(List<String>) Arrays.stream(listaHomemMulher).map(pessoa->{
-			String[] partes=pessoa.split("-");
-			String nome= partes[0];
-			String genero=partes[1];
-			if(genero.equals("M")) {
-				 return nome;
-			}
-			else if(genero.equals("H")) {
-				return nome;
-			}
-			
-			
-		});
-		.collect(Collectors.toList());
+		List<String> listaMulheres=Arrays.stream(listaHomemMulher)
+				.filter(p->p.endsWith("-M"))
+				.map(p->p.split("-")[0])
+				.collect(Collectors.toList());
+		System.out.println(listaMulheres);
+				
 	
 }
 }

@@ -1,8 +1,12 @@
 package streams;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import org.junit.Test;
 
 public class ClassificaPessoas {
 
@@ -16,4 +20,6 @@ public class ClassificaPessoas {
 				
 	
 }
+	
+	
 }
